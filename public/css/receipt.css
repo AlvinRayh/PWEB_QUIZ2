@@ -1,0 +1,97 @@
+:root {
+    --primary: #b6895b;
+    --background: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.receipt-box {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.receipt-box h1 {
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.receipt-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.customer-info,
+.order-info {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.customer-info table,
+.order-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.customer-info th,
+.order-info th {
+    text-align: left;
+    background-color: var(--primary);
+    color: white;
+    padding: 8px;
+}
+
+.customer-info td,
+.order-info td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.total {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.thank-you-message {
+    margin-top: 20px;
+}
+
+.kembali {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.kembali:hover {
+    background-color: var(--primary);
+}
