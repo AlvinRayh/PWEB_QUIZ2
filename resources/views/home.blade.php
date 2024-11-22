@@ -50,6 +50,57 @@
         </main>
     </section>
 
+    <section class="date-message">
+    <div class="date-container">
+        <h2 id="current-date"></h2>
+        <p id="daily-message"></p>
+    </div>
+</section>
+
+<script>
+    // Fungsi untuk mendapatkan nama hari
+    const getDayName = (dayNumber) => {
+        const days = [
+            "Minggu",
+            "Senin",
+            "Selasa",
+            "Rabu",
+            "Kamis",
+            "Jumat",
+            "Sabtu"
+        ];
+        return days[dayNumber];
+    };
+
+    // Fungsi untuk mendapatkan pesan harian
+    const getDailyMessage = (dayNumber) => {
+        const messages = {
+            0: "Nikmati akhir pekan dengan kopi terbaik kami!",
+            1: "Senin penuh semangat! Mulai minggu Anda dengan secangkir kopi.",
+            2: "Selasa santai. Nikmati kopi favorit Anda!",
+            3: "Rabu produktif! Jangan lupa istirahat sejenak dengan kopi.",
+            4: "Kamis ceria. Kopi kita siap menemani hari Anda.",
+            5: "Jumat bahagia! Nikmati akhir pekan bersama kopi terbaik.",
+            6: "Sabtu santai. Saatnya bersantai dengan secangkir kopi."
+        };
+        return messages[dayNumber] || "Selamat menikmati hari Anda dengan kopi!";
+    };
+
+    // Mendapatkan tanggal dan hari saat ini
+    const now = new Date();
+    const dayName = getDayName(now.getDay());
+    const currentDate = `${dayName}, ${now.toLocaleDateString('id-ID', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    })}`;
+
+    // Update elemen HTML
+    document.getElementById('current-date').textContent = `Hari ini: ${currentDate}`;
+    document.getElementById('daily-message').textContent = getDailyMessage(now.getDay());
+</script>
+
+
        <!-- Menu -->
        <section class="menu" id="menu" x-data="products">
     <h1>Menu</h1>
